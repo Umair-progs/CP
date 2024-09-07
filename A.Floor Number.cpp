@@ -18,7 +18,23 @@ long long lcm(long long int a,long long int b)
 
 //not understood it very well though
 void solve() {
+    int n,x;
+    cin>>n>>x;
 
+    n=n-2;
+    if(n<=0)
+    {
+        cout<<1<<endl;
+        return;
+    }
+    if(n%x>0)
+    {
+        cout<<1+n/x+1<<endl;
+        return;
+    }
+
+    cout<<n/x+1<<endl;
+    return;
 }
 
 int main() {
