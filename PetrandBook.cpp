@@ -20,10 +20,67 @@ long long lcm(long long int a,long long int b)
 void solve() {
     int n;
     cin>>n;
-    vector<int>v(n);
-    for(int i=0; i<n; i++)cin>>v[i];
+    vector<int>v(7);
+    int sum=0;
+    for(int i=0; i<7; i++)
+    {
+        cin>>v[i];
+        sum+=v[i];
+    }
 
-    
+    if(sum==1)
+    {
+        for(int i=0; i<7; i++)
+        {
+            if(v[i]==1)
+            {
+                cout<<i+1<<endl;
+                return;
+            }
+        }
+    }
+    else if(sum>=n)
+    {
+        int temp=0;
+        for(int i=0; i<7; i++)
+        {
+            temp+=v[i];
+            if(temp>=n)
+            {
+                cout<<i+1<<endl;
+                return;
+            }
+        }
+    }
+    else{
+        int diff=n%sum;
+        if(diff==0)
+        {
+            for(int i=6; i>=0; i--)
+            {
+                if(v[i]!=0)
+                {
+                    cout<<i+1<<endl;
+                    return;
+                }
+
+            }
+        }
+        int temp=0;
+        for(int i=0; i<7; i++)
+        {
+            temp+=v[i];
+            if(temp>=diff)
+            {
+                cout<<i+1<<endl;
+                return;
+            }
+        }
+    }
+
+return;
+
+
 
 }
 
