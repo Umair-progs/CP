@@ -50,9 +50,6 @@ void solve() {
     }
 
     string ans="";
-    for(auto s:v)ans+=s;
-
-    cout<<ans<<endl;
 
 
 }
