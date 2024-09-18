@@ -23,16 +23,14 @@ void solve() {
     int k,r;
     cin>>k>>r;
 
-    if(k<10)
+    for(int i=1; i<=10; i++)
     {
-        cout<<1<<endl;
-        return;
+        if((i*k)%10==r or (i*k)%10==0)
+        {
+            cout<<i<<endl;
+            return;
+        }
     }
-    else{
-        cout<<1+k/10<<endl;
-        return;
-    }
-    return;
 
 
 
